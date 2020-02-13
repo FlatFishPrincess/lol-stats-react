@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import SummonerForm from './components/summoner-form/summoner-form';
-import MatchCard from './match-card/match-card';
+import MatchCard from './components/match-card/match-card';
 import './App.css';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { matches: [] };
+    this.state = { matches: [], loading: null };
   }
 
   handleSearchName = async (name) => {

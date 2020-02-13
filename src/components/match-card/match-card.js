@@ -1,6 +1,6 @@
 import React from 'react'
 import './match-card.css';
-import { convertKda, convertTotalKill, convertCSPerMin, secondsToMinutes, timeFromNow, convertQueueType } from '../shared/stat-helper';
+import { convertKda, convertTotalKill, convertCSPerMin, secondsToMinutes, timeFromNow, convertQueueType } from '../../shared/stat-helper';
 
 const MatchCard = ({ match }) => {
   const { stats, gameDuration, gameCreation, queueTypeName, championName, items, spell1Name, spell2Name, primaryPerkIcon, secondaryPerkIcon } = match;
@@ -21,7 +21,7 @@ const MatchCard = ({ match }) => {
         <div className="flex-column-center">
           <div className="flex">
             <div>
-              <img className="champion-img" src={process.env.PUBLIC_URL + `/dragontail-10.3.1/img/champion/tiles/${championName}_0.jpg`} alt={`${championName} img`} />
+              <img className="champion-img" src={process.env.PUBLIC_URL + `/dragontail-10.3.1/10.3.1/img/champion/${championName}.png`} alt={`${championName} img`} />
             </div>
             <div className="flex">
               <div className="flex-column">
