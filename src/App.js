@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SummonerForm from './summoner-form/summoner-form';
+import SummonerForm from './components/summoner-form/summoner-form';
 import MatchCard from './match-card/match-card';
 import './App.css';
 
