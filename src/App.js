@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
 import SummonerForm from './components/summoner-form/summoner-form';
 import MatchCard from './components/match-card/match-card';
+import { connect } from 'react-redux';
+import { fetchSummonerByName } from './shared/actions/index';
+
 import './App.css';
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = { matches: [], loading: null };
   }
 
-  handleSearchName = async (name) => {
-    const CREATE_LOCATION_URL = `https://lol-stats-backend.herokuapp.com/api/summoner/${name}`;
-    const result = await fetch(CREATE_LOCATION_URL);
-    const matches =  await result.json();
-    this.setState({ matches });
+  handleSearchName = name => {
+    this.props.fetchSummonerByName(name);
   }
 
   renderSummonerName = () => {
-    const { matches } = this.state;
+    const { matches } = this.props;
     return matches[0] && matches[0]["player"]["summonerName"];
   }
 
+  renderLoading = () => {
+    return (
+      <img className="loading" src={process.env.PUBLIC_URL + `/dragontail-10.3.1/img/global/load01.gif`} alt='loading...' />);
+  }
+
   render() {
-    const { matches } = this.state;
+    const { matches, loading } = this.props;
+    if(loading) return this.renderLoading();
     return (
       <div className="root">
         <h1>League Stat</h1>
@@ -37,3 +43,14 @@ export default class App extends Component {
     );
   }
 }
+
+const mapDispatchToProps = {
+  fetchSummonerByName
+}
+
+const mapStateToProps = ({ matches }) => ({
+  matches: matches.matches,
+  loading: matches.loading
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

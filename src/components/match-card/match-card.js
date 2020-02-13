@@ -1,6 +1,6 @@
 import React from 'react'
 import './match-card.css';
-import { convertKda, convertTotalKill, convertCSPerMin, secondsToMinutes, timeFromNow, convertQueueType } from '../../shared/stat-helper';
+import { convertKda, convertTotalKill, convertCSPerMin, secondsToMinutes, timeFromNow, convertQueueType } from '../../shared/utils/stat-helper';
 
 const MatchCard = ({ match }) => {
   const { stats, gameDuration, gameCreation, queueTypeName, championName, items, spell1Name, spell2Name, primaryPerkIcon, secondaryPerkIcon } = match;

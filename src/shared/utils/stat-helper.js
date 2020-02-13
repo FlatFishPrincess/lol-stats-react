@@ -21,7 +21,7 @@ export const timeFromNow = (timestamp) => {
   return moment(timestamp).fromNow();
 }
 
-// remove unnecessary workds from queue type
+// remove unnecessary works from queue type
 export const convertQueueType = queueType => {
   return queueType.replace(/5v5|3v3|games/g,'');
 }

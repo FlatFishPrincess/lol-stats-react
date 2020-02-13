@@ -22,7 +22,7 @@ export default class SummonerForm extends Component {
   render() {
     const { summonerName } = this.state;
     return (
-      <form className='form-wrapper' onSubmit={this.onSubmitSummonerName}>
+      <form className='form-wrapper'>
         <input
           placeholder='enter summoner name'
           onChange={this.handleChange} 
