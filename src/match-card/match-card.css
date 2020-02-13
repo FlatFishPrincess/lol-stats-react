@@ -1,0 +1,101 @@
+/* flex shared */
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 650px;
+  align-items: baseline;
+  margin: 10px 0;
+  padding: 15px 0;
+}
+
+.victory {
+  background-color: #a3cfec;
+  border-color: #99b9cf;
+}
+
+.defeat {
+  background-color: #e2b6b3;
+  border-color: #cea7a7;
+}
+
+/* images */
+.champion-img {
+  border-radius: 50%;
+  max-width: 50px;
+  padding: 3px
+}
+
+.spell-img {
+  border-radius: 5px;
+  max-width: 30px;
+  padding: 1px
+}
+
+.perk-img {
+  border-radius: 50%;
+  max-width: 30px;
+  padding: 1px
+}
+
+
+.champion-name {
+  padding-top: 10px;
+}
+
+/* bar */
+.victory-bar {
+  display: block;
+  width: 27px;
+  margin: 5px auto;
+  height: 2px;
+  background: #99b9cf;
+}
+
+.defeat-bar {
+  display: block;
+  width: 27px;
+  margin: 5px auto;
+  height: 2px;
+  background: #cea7a7;
+}
+
+
+.victory-text {
+  color: #1a78ae
+}
+
+/* kda */
+.kda {
+  color: #879292;
+  font-size: 15px;
+}
+
+.kda-text {
+  color: #555e5e;
+  margin: 0 5px;
+}
+
+.defeat-text {
+  color: #c6443e
+ }
+ 
+ /* stat */
+ .stat {
+  color: #555e5e;
+  font-size: 12px;
+ }
